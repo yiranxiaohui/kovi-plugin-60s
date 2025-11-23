@@ -7,21 +7,11 @@
 - 从配置的 URL 获取每日新闻。
 - 使用 `reqwest` 进行异步 HTTP 请求。
 - 使用 `serde` 进行 JSON 数据解析。
-- 支持通过 `/每日新闻` 命令触发新闻获取。
-
-## 安装
-
-确保你已经安装了 [Rust](https://www.rust-lang.org/) 和 [Cargo](https://doc.rust-lang.org/cargo/)。然后，克隆仓库并构建插件：
-
-```bash
-git clone https://gitee.com/yiranxiaohui/kovi-plugin-news
-cd kovi-plugin-60s
-cargo build --release
-```
+- 支持通过 `/60s` 命令触发60s新闻获取。
 
 ## 配置
 
-在`data/插件名/config.toml` 文件中配置新闻 API 的 URL：
+在`data/kovi-plugin-news/config.toml` 文件中配置新闻 API 的 URL：
 
 ```toml
 url = "http://your-news-api.com"
