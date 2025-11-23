@@ -21,11 +21,17 @@ cargo build --release
 
 ## 配置
 
-在 `config.toml` 文件中配置新闻 API 的 URL：
+在`data/插件名/config.toml` 文件中配置新闻 API 的 URL：
 
 ```toml
 url = "http://your-news-api.com"
 ```
+
+公益`60s`API接口
+```toml
+url = "https//60s.yunnet.top"
+```
+
 
 ## 使用
 
