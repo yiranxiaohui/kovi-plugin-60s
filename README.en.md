@@ -15,7 +15,7 @@ Ensure you have [Rust](https://www.rust-lang.org/) and [Cargo](https://doc.rust-
 
 ```bash
 git clone https://gitee.com/yiranxiaohui/kovi-plugin-news
-cd kovi-plugin-news
+cd kovi-plugin-60s
 cargo build --release
 ```
 

@@ -15,7 +15,7 @@
 
 ```bash
 git clone https://gitee.com/yiranxiaohui/kovi-plugin-news
-cd kovi-plugin-news
+cd kovi-plugin-60s
 cargo build --release
 ```
 
