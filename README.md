@@ -1,4 +1,4 @@
-# Kovi-plugin-news
+# Kovi-plugin-60s
 
 这是一个为 [Kovi](https://github.com/0x727/kovi) 开发的插件，用于获取每日新闻。它通过 HTTP 请求从指定的 URL 获取新闻数据，并使用 `serde` 序列化库来解析 JSON 响应。
 
@@ -11,10 +11,10 @@
 
 ## 配置
 
-在`data/kovi-plugin-news/config.toml` 文件中配置新闻 API 的 URL：
+在`data/kovi-plugin-60s/config.toml` 文件中配置新闻 API 的 URL：
 
 ```toml
-url = "http://your-news-api.com"
+url = "http://your-60s-api.com"
 ```
 
 公益`60s`API接口
@@ -25,7 +25,11 @@ url = "https//60s.yunnet.top"
 
 ## 使用
 
-启动 Kovi 并加载插件。发送 `/每日新闻` 命令以获取最新的新闻。
+启动 Kovi 并加载插件。。
+
+## 支持的命令
+- `/60s` 机器人回复每日新闻的图片
+- `/help` 机器人回复本插件所有支持的命令
 
 ## 项目结构
 
