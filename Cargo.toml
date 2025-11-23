@@ -3,6 +3,14 @@ name = "kovi-plugin-60s"
 version = "0.1.0"
 edition = "2024"
 
+description = "kovi plugin"
+license = "MIT OR Apache-2.0"
+readme = "README.md"
+homepage = "https://gitee.com/yiranxiaohui/kovi-plugin-60s"
+repository = "https://gitee.com/yiranxiaohui/kovi-plugin-60s"
+documentation = "https://docs.rs/kovi-plugin-60s"
+
+
 [dependencies]
 kovi = "0.12.5"
 reqwest = { version = "0.12.24", features = ["default", "json"] }
