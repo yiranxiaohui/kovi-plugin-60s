@@ -20,6 +20,18 @@ async fn main() {
                 let msg = Message::new()
                     .add_image(news.image.as_str());
                 event.reply(msg);
+            } else if text.starts_with("/help") {
+                // let help = get_help(bot).await;
+                // let help: String = {
+                //     let mut result = String::new();
+                //     for s in help {
+                //         result.push_str(s.as_str());
+                //     }
+                //     result
+                // };
+                let msg = Message::new()
+                    .add_text("- /60s");
+                event.reply(msg);
             }
         }
     });
@@ -46,3 +58,13 @@ async fn get_news(bot: Arc<RuntimeBot>) -> News {
     let response: Response<News> = serde_json::from_str(json.as_str()).unwrap();
     response.data
 }
+
+// async fn get_help(bot: Arc<RuntimeBot>) -> Vec<String> {
+//     let client = reqwest::Client::new();
+//     let config = read_config(bot);
+//     let res = client.get(format!("{}", config.url)).send().await.unwrap();
+//     let json = res.text().await.unwrap();
+//     info!("json = {:?}", json);
+//     let response: Response<Vec<String>> = serde_json::from_str(json.as_str()).unwrap();
+//     response.data
+// }
