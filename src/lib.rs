@@ -1,6 +1,7 @@
 mod model;
 
 use std::sync::Arc;
+use kovi::log::{info};
 use kovi::{serde_json, toml, Message, PluginBuilder as plugin, PluginBuilder, RuntimeBot};
 use kovi::toml::{toml};
 use kovi::utils::load_toml_data;
@@ -14,7 +15,7 @@ async fn main() {
         let bot = bot.clone();
         async move {
             let text = event.borrow_text().unwrap_or("");
-            if text.starts_with("/每日新闻") {
+            if text.starts_with("/60s") {
                 let news = get_news(bot).await;
                 let msg = Message::new()
                     .add_image(news.image.as_str());
@@ -41,7 +42,7 @@ async fn get_news(bot: Arc<RuntimeBot>) -> News {
     let config = read_config(bot);
     let res = client.get(format!("{}/v2/60s", config.url)).send().await.unwrap();
     let json = res.text().await.unwrap();
-    println!("json = {:?}", json);
+    info!("json = {:?}", json);
     let response: Response<News> = serde_json::from_str(json.as_str()).unwrap();
     response.data
 }
