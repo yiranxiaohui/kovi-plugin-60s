@@ -1,6 +1,6 @@
 # Kovi-plugin-60s
 
-这是一个为 [Kovi](https://github.com/0x727/kovi) 开发的插件，用于获取每日新闻。它通过 HTTP 请求从指定的 URL 获取新闻数据，并使用 `serde` 序列化库来解析 JSON 响应。
+这是一个为 [Kovi](https://github.com/ThriceCola/Kovi) 开发的插件，基于 [60s](https://github.com/vikiboss/60s)用于获取每日新闻。它通过 HTTP 请求从指定的 URL 获取新闻数据，并使用 `serde` 序列化库来解析 JSON 响应。
 
 ## 特性
 
@@ -19,9 +19,17 @@ url = "http://your-60s-api.com"
 
 公益`60s`API接口
 ```toml
-url = "https//60s.yunnet.top"
+url = "https://60s.yunnet.top"
 ```
 
+60s自建方案（Docker）
+```bash
+docker run -d \
+  --restart always \
+  --name 60s \
+  -p 4399:4399 \
+  vikiboss/60s:latest
+```
 
 ## 使用
 
