@@ -27,7 +27,8 @@ async fn main() {
                 }
             } else if text.starts_with("/help") {
                 let msg = Message::new()
-                    .add_text("- /60s");
+                    .add_text("- /60s")
+                    .add_text("- /help");
                 event.reply(msg);
             }
         }
