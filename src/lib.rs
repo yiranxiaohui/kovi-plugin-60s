@@ -1,7 +1,7 @@
 mod model;
 
 use std::sync::Arc;
-use kovi::log::{debug, info};
+use kovi::log::{debug};
 use kovi::{serde_json, toml, Message, PluginBuilder as plugin, PluginBuilder, RuntimeBot};
 use kovi::toml::{toml};
 use kovi::utils::load_toml_data;
